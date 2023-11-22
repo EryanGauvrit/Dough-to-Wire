@@ -15,9 +15,7 @@ export const Cards = () => {
     const handleClick = () => {
         const card = randomChoose(surprises);
         setCardContent(card);
-        setOpenCard(true);
-        console.log(card)
-
+        setOpenCard(!openCard);
     }
 
     return (
@@ -29,13 +27,15 @@ export const Cards = () => {
                 <img src={cardVerso} alt='surpise card verso' />
                 <img src={cardVerso} alt='surpise card verso' />
             </div>
-            {
-                openCard && cardContent &&
-                <div className='ShowCard'>
-                    <h1>{cardContent.isBonus ? 'BONUS' : 'PENALTY'}</h1>
-                    <p>{cardContent.content}</p>
+            <div className={`card ${openCard ? 'openCard' :'closeCard'}`}>
+                <div className={`showCard` } >
+                    <span className='closeButton' onClick={handleClick}>+</span>
+                    <div>
+                        <h1>{cardContent.isBonus ? 'BONUS' : 'PENALTY'}</h1>
+                        <p>{cardContent.content}</p>
+                    </div>
                 </div>
-            }
+            </div>
         </div>
     )
 }
