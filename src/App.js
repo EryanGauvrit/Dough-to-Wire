@@ -4,7 +4,7 @@ function App() {
       <header className="App-header">
         
       </header>
-      <h1>Hello</h1>
+      <h1>Dough-to-Wire - The sauciest UX Challenge</h1>
     </div>
   );
 }
