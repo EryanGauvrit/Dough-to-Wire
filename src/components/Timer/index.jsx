@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useTimer } from 'react-timer-hook';
 import { Button } from '../Button';
+import useSound from 'use-sound';
+import soundTimer from '../../assets/sounds/duringTimer.mp3'
 
 export const Timer = () => {
     const expiryTimestamp = new Date();
     expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 60);
     const [startTimer, setStartTimer] = useState(true);
+    const [playSoundTimer, playSoundTimerData] = useSound(soundTimer);
 
     const {
         seconds,
@@ -19,9 +22,11 @@ export const Timer = () => {
     const handleClickPlay = () => {
         setStartTimer(!startTimer);
         if(!isRunning){
-            start()
+            start();
+            playSoundTimer();
         }else {
             pause()
+            playSoundTimerData.pause();
         }
     }
 
