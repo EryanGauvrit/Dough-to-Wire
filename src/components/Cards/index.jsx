@@ -21,11 +21,11 @@ export const Cards = () => {
     return (
         <div className='cards-bloc'>
             <div className='deck' onClick={handleClick}>
-                <img src={cardVerso} alt='surpise card verso' />
-                <img src={cardVerso} alt='surpise card verso' />
-                <img src={cardVerso} alt='surpise card verso' />
-                <img src={cardVerso} alt='surpise card verso' />
-                <img src={cardVerso} alt='surpise card verso' />
+                <div className='back-card'><p>SURPRISE DELIVERY !</p></div>
+                <div className='back-card'><p>SURPRISE DELIVERY !</p></div>
+                <div className='back-card'><p>SURPRISE DELIVERY !</p></div>
+                <div className='back-card'><p>SURPRISE DELIVERY !</p></div>
+                <div className='back-card'><p>SURPRISE DELIVERY !</p></div>
             </div>
             <div className={`card ${openCard ? 'openCard' :'closeCard'}`}>
                 <div className={`showCard` } >
