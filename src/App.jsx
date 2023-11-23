@@ -1,5 +1,6 @@
 import { Cards } from "./components/Cards";
 import logo from './assets/logo.png';
+import { Timer } from "./components/Timer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <main>
         <Cards />
+        <Timer />
       </main>
     </div>
   );
