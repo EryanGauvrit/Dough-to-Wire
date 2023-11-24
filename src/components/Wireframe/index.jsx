@@ -12,7 +12,7 @@ export const Wireframe = () => {
 
     return (
         <div className="wireframe">
-            <Button onClick={handleClick} content='WIREFRAME CORRECTION' />
+            <Button onClick={handleClick} className='wireframe-button' content='WIREFRAME CORRECTION' />
             {
                 open && 
                 <div>
