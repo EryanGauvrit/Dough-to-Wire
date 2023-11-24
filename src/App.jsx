@@ -89,21 +89,25 @@ function App() {
               <div className='dialog-card'>
                   <div className={`card ${openCard ? 'openCard' :'closeCard'}`}>
                       <div className={`showCard` } >
-                          <h1>{cardContent.isBonus ? 'BONUS' : 'PENALTY'}</h1>
-                          <p>{cardContent.content}</p>
+                        <span className='closeButton' onClick={handleClick}>+</span>
+                        <div>
+                            <h1>{cardContent.isBonus ? 'BONUS' : 'PENALTY'}</h1>
+                            <p>{cardContent.content}</p>
+                        </div>
                       </div>
                   </div>
-                  <div className='button-list-teams'>
+                  {/* <div className='button-list-teams'>
                       { team1 && <Button onClick={handleClickChooseTeam1} value={cardContent.id} content={team1.name}/> }
                       { team2 && <Button onClick={handleClickChooseTeam2} value={cardContent.id} content={team2.name}/> }
                       { team3 && <Button onClick={handleClickChooseTeam3} value={cardContent.id} content={team3.name}/> }
                       { team4 && <Button onClick={handleClickChooseTeam4} value={cardContent.id} content={team4.name}/> }
-                  </div>
+                  </div> */}
               </div>
               }
           </div>
         <Timer />
         {/* <Score team1={team1Data} team2={team2Data} team3={team3Data} team4={team4Data} /> */}
+        
       </main>
     </div>
   );
