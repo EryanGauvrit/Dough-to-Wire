@@ -4,6 +4,7 @@ import { Button } from './components/Button';
 import { useSessionStorage } from 'usehooks-ts';
 import { Score } from "./components/Score";
 import { Timer } from "./components/Timer";
+import { Wireframe } from './components/Wireframe';
 
 function App() {
 
@@ -107,7 +108,7 @@ function App() {
           </div>
         <Timer />
         {/* <Score team1={team1Data} team2={team2Data} team3={team3Data} team4={team4Data} /> */}
-        
+        <Wireframe />
       </main>
     </div>
   );
