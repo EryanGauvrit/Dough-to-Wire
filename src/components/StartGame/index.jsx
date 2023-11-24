@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 export const StartGame = () => {
 
-    const [inputNbr, setInputNbr] = useState(1);
-    const [teams, setTeams] = useState([`team0`]);
+    const [inputNbr, setInputNbr] = useState(2);
+    const [teams, setTeams] = useState([`team0`, `team1`]);
     const navigate = useNavigate();
 
     const handleAddInput = () => {
@@ -17,7 +17,7 @@ export const StartGame = () => {
     };
 
     const handleRemoveInput = () => {
-        if(teams.length > 1){
+        if(teams.length > 2){
             teams.pop();
             setInputNbr(inputNbr - 1)
             setTeams(teams);     

@@ -14,10 +14,10 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route exact path='/'
+        {/* <Route exact path='/'
             element={<StartGame />}
-        />
-        <Route exact path='/game'
+        /> */}
+        <Route exact path='/'
             element={<App />}
         />
         <Route exact path='*'
